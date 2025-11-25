@@ -1,0 +1,47 @@
+/* Global wood background */
+body {
+  margin: 0;
+  padding: 0;
+  background: #8b5a2b;
+  background-image: url("https://www.transparenttextures.com/patterns/wood.png");
+  background-repeat: repeat;
+  font-family: "Georgia", serif;
+}
+
+/* Navigation bar */
+nav {
+  background: #8b5a2b;
+  background-image: url('https://www.transparenttextures.com/patterns/wood.png');
+  padding: 15px;
+  border: 4px solid #5b3c1b;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Navigation links */
+nav a {
+  color: #ffe8c6;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  background: rgba(255,255,255,0.1);
+}
+
+nav a:hover {
+  background: #c59b63;
+  color: #3a240c;
+  transform: scale(1.05);
+}
+
+/* Router outlet spacing */
+router-outlet {
+  display: block;
+  margin-top: 20px;
+  padding: 20px;
+}
