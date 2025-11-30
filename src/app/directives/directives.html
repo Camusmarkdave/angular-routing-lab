@@ -1,1 +1,140 @@
-<p>directives works!</p>
+<div class="container">
+  <h1>Directives</h1>
+
+  <section class="section-box">
+    <h2>1. Static Note (&#64;if)</h2>
+    <table>
+      <tr>
+        <td>
+          @if(isStaticNoteVisible == true) {
+            <h2>This is a static note with true value!</h2>
+          } @else {
+            <h2>This static note has false value.</h2>
+          }
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="section-box">
+    <h2>2. Control Visibility</h2>
+    <table>
+      <tr>
+        <td>
+          @if(isNoteVisible == true) {
+            <p class="note">This is a note!</p>
+          }
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button (click)="showNote()">Show Note</button>
+          <button (click)="hideNote()">Hide Note</button>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="section-box">
+    <h2>3. Toggle Paragraph</h2>
+    <table>
+      <tr>
+        <button (click)="toggleNote()">
+          {{ isParagraphVisible ? 'Hide' : 'Show' }}
+        </button>
+      </tr>
+      <tr>
+        @if(isParagraphVisible) {
+          <p class="note">This is the paragraph content.</p>
+        }
+      </tr>
+    </table>
+  </section>
+
+  <section class="section-box">
+    <h2>4. Static Month Check</h2>
+    <table>
+      <tr>
+        <td>
+          @if(monthNameStatic == 'Jan') {
+            <p>January</p>
+          } @else if(monthNameStatic == 'Feb') {
+            <p>February</p>
+          } @else if(monthNameStatic == 'Mar') {
+            <p>March</p>
+          }
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="section-box">
+    <h2>5. Dynamic Month Check</h2>
+    <table>
+      <tr>
+        <td>
+          @if(monthNameDynamic == 'Jan') {
+            <p>January</p>
+          } @else if(monthNameDynamic == 'Feb') {
+            <p>February</p>
+          } @else if(monthNameDynamic == 'Mar') {
+            <p>March</p>
+          } @else {
+            <p>Wrong input!</p>
+          }
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" [(ngModel)]="monthNameDynamic">
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="section-box">
+    <h2>6. City List (&#64;for)</h2>
+    <table>
+      <tr>
+        <td>
+          <ul>
+            @for (item of cityList; track $index) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="section-box">
+    <h2>7. Student Directory</h2>
+    <table class="student-table">
+      <thead>
+        <tr>
+          <th>Student No</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of studentList; track $index) {
+          <tr>
+            <td>{{ $index+1 }}</td>
+            <td>{{ item.stud_name }}</td>
+            <td>{{ item.course }}</td>
+            <td>
+              @if (item.isActive == true) {
+                <p class="status active">Active</p>
+              } @else {
+                <p class="status inactive">Inactive</p>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+
+</div>

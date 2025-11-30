@@ -1,0 +1,123 @@
+/* Container matches your Home/Data-Binding theme */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.12); /* Glass effect */
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  max-width: 700px; /* Made slightly wider for the student table */
+  width: 95%;
+  text-align: center;
+  border: 3px solid #8B5E3C;
+  color: #3E2C1C;
+  margin: 20px auto; 
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+h2 {
+  color: #5C3A21;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #8B5E3C;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.section-box {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Button Styling */
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8B5E3C;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #A46B4A;
+}
+
+/* Input Styling */
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #8B5E3C;
+}
+
+/* Table Styling (Required by Lab) */
+table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.note {
+  font-weight: bold;
+  color: #8B0000;
+  background: #ffcccc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Student Table Specifics */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.student-table th, .student-table td {
+  border: 1px solid #8B5E3C;
+  padding: 8px;
+  text-align: left;
+}
+
+.student-table th {
+  background-color: #8B5E3C;
+  color: white;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.status {
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.active { color: green; }
+.inactive { color: red; }
